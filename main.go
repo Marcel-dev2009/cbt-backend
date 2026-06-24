@@ -13,6 +13,9 @@ func main(){
   config.Load()
   r := gin.Default()
   r.Use(cors.New(config.CORSConfig()));
+  r.GET("/" , func(c *gin.Context) {
+    c.JSON(200 , gin.H{"status":"backend server is running smoothly"})
+  })
   routes.Setup(r)
   port := os.Getenv("PORT")
   if port == ""{

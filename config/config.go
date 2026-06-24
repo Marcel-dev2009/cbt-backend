@@ -18,10 +18,7 @@ var DB *gorm.DB
 var RedisClient *redis.Client // Defining type of our newly created variables without initializing them with a value
 var CloudinaryClient *cloudinary.Cloudinary;
 func Load (){
- err := godotenv.Load()
- if err != nil{
-  log.Fatal("Error loading env files")	
- }
+ _ = godotenv.Load()
  connectDB()
  connectRedis()
  connectCloudinary()	

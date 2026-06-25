@@ -57,7 +57,7 @@ func connectRedis (){
 
 func CORSConfig() cors.Config{
   config := cors.DefaultConfig()
-  config.AllowOrigins = []string{"https://prep-mate-xyz.vercel.app/","http://localhost:3000"}
+  config.AllowOrigins = []string{"https://prep-mate-xyz.vercel.app","http://localhost:3000"}
   config.AllowMethods = []string{"GET" , "POST" ,"PUT" , "PATCH" , "DELETE" , "OPTIONS"}
   config.AllowHeaders = []string{"Origin","Content-Type","Authorization"}
   config.AllowCredentials = true
